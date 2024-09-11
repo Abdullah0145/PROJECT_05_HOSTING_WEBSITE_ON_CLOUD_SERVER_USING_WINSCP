@@ -1,0 +1,104 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-05-Hosting Website on Cloud Server using WinSCP</title>
+</head>
+<body>
+    <h1>Project-05::Hosting Website on Cloud Server using WinSCP Software::</h1>
+    <p>Step 1: first "login/sign-in" with "Root User" on "AWS Management Console".</p>
+    <img src="./Project_05 Images/Screenshot(01).png" width="1000px" height="450px">
+    <p>Step 2: Give the "email address" of the "Root User:(mdabdullahsheikh880@gmail.com)" on "AWS Management Console".</p>
+    <img src="./Project_05 Images/Screenshot(02).png" width="1000px" height="450px">
+    <p>Step 3: Give the Password of the "Root User:(Abdullah@-0***)" on "AWS Management console".</p>
+    <img src="./Project_05 Images/Screenshot(03).png" width="1000px" height="450px">
+    <p>Step 4: Search "EC2 Service" on the Search box and go to the inside "EC2 Service".</p>
+    <img src="./Project_05 Images/Screenshot(04).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(05).png" width="1000px" height="450px">
+    <p>Step 5: In left corner given "Instances" and click on that "Instances" and after In right corner upperside given "Launch Instances" go and click on that "Launch Instances"</p>
+    <img src="./Project_05 Images/Screenshot(06).png" width="1000px" height="450px">
+    <p>Step 6: Inside "Launch an Instance" given "Name and tags" you can give the "Name:WebServer01" [It is upto you whatever you want to give any name inside "Name and tags", you can give any "Name and tags"].</p>
+    <img src="./Project_05 Images/Screenshot(07).png" width="1000px" height="450px">
+    <p>Step 7: Inside "Launch "Application and OS Images (Amazon Machine Image{AMI})"gievn "Quick Start" you can select anyone "AMI" from the "Quick Start" for Example:"Amazon linux", or "MacOS", or "Ubuntu", or "Windows", RedHat, etc...(Whatever you want, you can select anyone as your preference "AMI")But, now i can select one option "AMI" from the "Quick Start" "Amazon-linux", after you can keep in default.</p>
+    <img src="./Project_05 Images/Screenshot(08).png" width="1000px" height="450px">
+    <p>Step 8: Inside "Launch an Instance" given "Instance type" you can select on that "t2.micro"</p>
+    <img src="./Project_05 Images/Screenshot(09).png" width="1000px" height="450px">
+    <p>Step 9: Inside "Launch an Instance" given "key pair(login)" you can give anyone "Key pair name:mine_key" OR if you don't have "key pair name" you can "Create new key pair" after you can click on that "Create new key pair" and after inside "Create key pair" you can give "Key pair name:winserver-2pm" after you can select "Key pair type:RSA" and after you can also select "Private file format:(.pem)(for use with OpenSSH{for Gitbash, Amazon linux})" after you can click on that "Create Key pair", finally your's Key Create Successfully.</p>
+    <img src="./Project_05 Images/Screenshot(10).png" width="1000px" height="250px">
+    <p>OR</p>
+    <img src="./Project_05 Images/Screenshot(11).png" width="1000px" height="450px">
+    <p>Step 10: Inside "Launch an Instance" given "Network Settings" click on "Edit" button on right side corner in "Network settings" and after select default "VPC:vpc0d03551655320d***", and select "Subnet:No preference"(Here i am not given any preference zone), and "Auto-assign Public IP:Enable", select on that "Create security group" and you can give the name of "Security group name:winserver-sec-2pm" and you can give same "Description:winserver-sec-2pm", In "Inbound security group rules" give the permission "type:ssh, "Protcol:TCP", Port range:22, "Source type:Anywhere", "Source(0.0.0.0/0)" "Description: Securly connecting Host Server(Linux and Ubuntu Server)" and after go and click on that "Add security group rule" and also Allow "type:HTTP, "Protcol:TCP", Port range:80, "HTTP:80", "Source type:AnyWhere(0.0.0.0/0)", you can select "Source:0.0.0.0/0" and you can type on "description:for Web Hosting" and after go and click on that "Add security group rule" and also Allow "type:HTTPS, "Protcol:TCP", Port range:443, "Source type:Anywhere", "Source(0.0.0.0/0)" "Description:Security for Web Hosting" and after you can keep in default everythings.</p>
+    <img src="./Project_05 Images/Screenshot(12).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(13).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(14).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(15).png" width="1000px" height="450px">
+    <p>Step 11:After inside "Launch an Instance" write the Shell Script/Bash Script in "Advanced details" and after you can keep in default everything and after click on that "Launch Instance".</p>
+    <img src="./Project_05 Images/Screenshot(16).png" width="1000px" height="450px">
+    <p>Step 12:After that you will get notification message, Saying that you have to Successfully "Launch Instances", After click on that "View all Instances" In below given dashboard Image.</p>
+    <img src="./Project_05 Images/Screenshot(17).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(18).png" width="1000px" height="450px">
+    <p>Step 13:After Copy the "Public Address:43.204.110.213, and Paste in the Another Browser(like Google chrome, Microsoft Edge, ect...) You are checking your's Bash Script is running or not? Yes mine Bash Script is running sucessfully.</p>
+    <img src="./Project_05 Images/Screenshot(19).png" width="1000px" height="450px">
+    <p>Step 14:Let us first Check WinScp is having or not in your system? You have WinScp in your system you are continue Proceed... but you don't have WinScp in your system, you have to Download first WinScp in your system.</p>
+    <p>Step 15: Now I am downloading and Installing WinScp in my system, Open the "Google Chrome" In "Google chrome Search on the Search box:WinScp", Click on that "First link" after click on that "Download WINSCP 6.3.4(11MB). after go and click on that link <a href="https://winscp.net/eng/download.php">Download WinScp.</a></p>
+    <img src="./Project_05 Images/Screenshot(20).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(21).png" width="1000px" height="450px">
+    <p>WinScp Downloading Successfully.</p>
+    <p>Step 16:Let us start now install WinScp, First go to Actual Folder, Where is your "WinScp", after right click on that "WinScp" after click on that "Run as administrator".</p>
+    <img src="./Project_05 Images/Screenshot(22).png" width="1000px" height="450px">
+    <p>Step 17:After click on that "Install for all users(recommended)".</p>
+    <img src="./Project_05 Images/Screenshot(23).png" width="1000px" height="450px">
+    <p>Step 18:Inside "Setup-WinSCP 6.3.4" Click on that "Accept".</p>
+    <img src="./Project_05 Images/Screenshot(24).png" width="1000px" height="450px">
+    <p>Step 19:Inside "Setup-WinSCP 6.3.4" Select on that "Typical installation(recommended)", after click on that "Next".</p>
+    <img src="./Project_05 Images/Screenshot(25).png" width="1000px" height="450px">
+    <p>Step 20:Inside "Setup-WinSCP 6.3.4" Select on that "User interface style" and after click on that "Next".</p>
+    <img src="./Project_05 Images/Screenshot(26).png" width="1000px" height="450px">
+    <p>Step 21:Inside "Setup-WinSCP 6.3.4" click on that "Install".</p>
+    <img src="./Project_05 Images/Screenshot(27).png" width="1000px" height="450px">
+    <p>Step 22:Successfully, Installed WinSCP in your system fimnally, after click on that "Finish".</p>
+    <img src="./Project_05 Images/Screenshot(28).png" width="1000px" height="350px">
+    <p>Step 23: Let us Search any "free Website templates" and after download any free website templates, <a href="https://themewagon.com/themes/landwind-free-responsive-tailwindcss-landing-page-template/">Download Any Free Website templates.</a> Now I am downloading "free Website template name:Landwind Website tempalate" after click on that "Landwind Website template" after right corner click on that "Download" button.</p>
+    <img src="./Project_05 Images/Screenshot(29).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(30).png" width="1000px" height="450px">
+    <p>Successfully, Download "Landwind Website template" finally</p>
+    <p>Step 24:After go to the "Actual Folder" Where is your's "Landwind Website template" after right click on that "Landwind Website template" and Extract the file"Landwind Website template" and Extract it successfully.</p>
+    <img src="./Project_05 Images/Screenshot(31).png" width="1000px" height="450px">
+    <p>Step 25:Give your "Host name:inside WinSCP, first go to the "EC2 Service" on AWS, Select the "Instance:(WebServer02)" after click on that "Connect".</p>
+    <img src="./Project_05 Images/Screenshot(32).png" width="1000px" height="450px">
+    <p>Step 26:After go to the SSH client, In SSH client Copy "Connect to your instance using its Public DNS:ec2-65-2-73-246.ap-south-1.compute.amazonaws.com" after Paste inside WinSCP "Host name:ec2-65-2-73-246.ap-south-1.compute.amazonaws.com" and after Give "User name:ec2-user" and after click on that "Advanced"</p>
+    <img src="./Project_05 Images/Screenshot(33).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(34).png" width="1000px" height="450px">
+    <p>Step 27:Inside "WinSCP" in "Advanced Site Settings" first click on that "Authentication" and after click on that "Private Key file:...(Bar), after go to the actual folder where is your's Private key, Select the "Private Key:mine_key" after click on that "Open".</p>
+    <img src="./Project_05 Images/Screenshot(35).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(36).png" width="1000px" height="450px">
+    <p>Step 28:Inside "WinSCP" Click on that "Ok".</p>
+    <img src="./Project_05 Images/Screenshot(37).png" width="1000px" height="450px">
+    <p>Step 29:Inside "WinSCP" Click on that "Login".</p>
+    <img src="./Project_05 Images/Screenshot(38).png" width="1000px" height="450px">
+    <p>Step 30:Inside "WinSCP" Click on that "Accept".</p>
+    <img src="./Project_05 Images/Screenshot(39).png" width="1000px" height="450px">
+    <p>Step 31:Inside "WinSCP" right side part is "Server(ec2-user)" and left side is "Loacal System(Here is Winland Website tempalte)".</p>
+    <img src="./Project_05 Images/Screenshot(40).png" width="1000px" height="450px">
+    <p>Step 32:Inside "WinSCP" in right side part Server(ec2-user), click on that /"root", and after click on that "var", and after click on that "www" and after click on that "html".</p>
+    <img src="./Project_05 Images/Screenshot(41).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(42).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(43).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(44).png" width="1000px" height="450px">
+    <p>Step 33:Inside "WinSCP" in left side part go to your actual folder where is your's "Winland template" Select that Website template(Windland) and after you have complete to move everything and after right click go to the "Upload" and after go and click on that again "Upload", and after click on that "Yes".</p>
+    <img src="./Project_05 Images/Screenshot(45).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(46).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(47).png" width="1000px" height="450px">
+    <p>Step 34:After click on that "OK".</p>
+    <img src="./Project_05 Images/Screenshot(48).png" width="1000px" height="450px">
+    <p>Step 35: Inside Instance In EC2 Service, Select the Instance(WebServer02), after go to the "Connect", after go to "EC2 Instance Connect" after go and click on that "Connect" after you are seeing black screen that is called "CLI(Command line Interface) Amazon linux".</p>
+    <img src="./Project_05 Images/Screenshot(49).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(50).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(51).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(52).png" width="1000px" height="450px">
+    <p>Step 36:Now give to permission commannd to Launch the "Windland Website template" after copy the "Public IP Address:13.233.24.161" and Paste in Public IP Address "Another Browser:13.233.24.161".</p>
+    <img src="./Project_05 Images/Screenshot(53).png" width="1000px" height="450px">
+    <img src="./Project_05 Images/Screenshot(54).png" width="1000px" height="450px">
+    <p>Successfully Launch the Our "Windland Website template" using "WinSCP".</p>
+</body>
+</html>
